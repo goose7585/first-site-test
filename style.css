@@ -1,0 +1,256 @@
+body {
+    background-color: #000000; /* Black */
+    /* Removed background image for a darker theme */
+    color: #00FFFF; /* Neon Cyan */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Fixed width, common in 90s */
+    margin: 15px auto;
+    background-color: #1a1a1a; /* Very Dark Gray */
+    border: 5px outset #FF00FF; /* Neon Magenta Border */
+    padding: 15px;
+    box-shadow: 0px 0px 15px #FF00FF; /* Neon Magenta Glow */
+}
+
+header, footer {
+    text-align: center;
+    color: #00FF00; /* Neon Green */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Classic bad choice */
+}
+
+header h1, header h2 {
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px #00FF00; /* Neon Green Text Glow */
+}
+
+.divider {
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    filter: hue-rotate(180deg) brightness(1.5); /* Adjust divider colors to fit neon */
+}
+
+main {
+    padding: 10px;
+    background-color: #2a2a2a; /* Dark Gray */
+    color: #FFFFFF; /* White text for readability */
+    border: 3px inset #0000FF; /* Neon Blue Border */
+    font-size: 16px; /* Readable base size */
+}
+
+.ad p {
+    margin-bottom: 1em;
+    line-height: 1.4;
+    color: #DDDDDD; /* Light gray text */
+}
+.ad p strong { /* Make strong text stand out more */
+    color: #00FFFF; /* Neon Cyan */
+}
+
+.ad-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    border: 3px solid #00FF00; /* Neon Green border */
+}
+
+.inline-image {
+    height: 30px; /* Make inline images small */
+    vertical-align: middle;
+    margin: 0 5px;
+    border: 1px solid #555; /* Darker border */
+    background-color: #fff; /* Ensure transparent parts of icons are visible */
+}
+/* Adjust bible icon if it looks bad */
+img[alt="Image of a Bible"] {
+    background-color: transparent;
+}
+
+.salesman {
+    height: 50px;
+    border-radius: 50%; /* Make it pop */
+    border: 2px solid #FFFF00; /* Neon Yellow border */
+}
+
+.zoom-in {
+     /* Simple hover effect instead of complex zoom */
+    transition: transform 0.2s ease-in-out;
+}
+
+.zoom-in:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #FFFF00; /* Neon Yellow Glow on Hover */
+}
+
+.highlight {
+    font-weight: bold;
+    color: #FFFF00; /* Neon Yellow */
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 1px 1px 3px #FF8C00; /* Orange glow */
+}
+
+.censored {
+    background-color: #FFFF00; /* Neon Yellow Censor bar */
+    color: #FFFF00;
+    padding: 0 2px;
+    font-weight: bold;
+    text-shadow: none;
+    /* User can select text to see */
+}
+
+.buy-section {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: 2px dashed #FF0000; /* Neon Red */
+    padding: 10px;
+    background-color: #111; /* Dark background */
+    color: #FFFF00; /* Neon Yellow text */
+    box-shadow: inset 0 0 10px #FF0000; /* Inner red glow */
+}
+.buy-section strong {
+    color: #FF00FF; /* Magenta price */
+}
+
+.buy-button {
+    border: none;
+    cursor: pointer;
+    width: 150px; /* Adjust as needed */
+    margin-top: 10px;
+    filter: brightness(1.2); /* Make gif brighter */
+}
+.buy-button:hover {
+    filter: brightness(1.5) drop-shadow(0 0 5px #FFFF00); /* Add glow on hover */
+}
+
+.tagline {
+    font-style: italic;
+    text-align: center;
+    color: #00FF00; /* Neon Green */
+    margin-top: 15px;
+}
+
+a {
+    color: #00BFFF; /* Deep Sky Blue (Neon-like) */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #9400D3; /* Dark Violet (Neon-like Purple) */
+}
+
+a:hover {
+    color: #FF0000; /* Neon Red hover */
+    text-decoration: none;
+    text-shadow: 0 0 5px #FF0000;
+}
+
+.fancy-hr {
+    border: none;
+    height: 3px;
+    /* Brighter Neon Gradient */
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8F00FF);
+    margin: 15px 0;
+    box-shadow: 0 0 5px #FFFFFF;
+}
+
+.sound-button {
+    background-color: #333; /* Dark gray */
+    border: 2px outset #555;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 5px;
+    margin: 0 5px;
+    vertical-align: middle;
+    color: #00FF00; /* Neon green text */
+}
+
+.sound-button:active {
+    border-style: inset;
+    color: #FFFF00; /* Neon yellow when clicked */
+}
+
+/* Blinking effect */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Shaking animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+.shake-price, .shake-phone {
+  display: inline-block; /* Needed for transform */
+  animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) infinite;
+  /* Make shaking more prominent */
+   font-weight: bold;
+}
+.shake-price {
+   color: #FF00FF; /* Neon Magenta for Price */
+   text-shadow: 0 0 5px #FF00FF;
+}
+.shake-phone {
+    color: #FFFF00; /* Neon Yellow for Phone */
+    text-shadow: 0 0 5px #FFFF00;
+}
+
+/* Basic mobile adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+        border-width: 3px; /* Thinner border */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    main {
+        font-size: 14px;
+    }
+
+    .ad-image {
+        max-width: 95%;
+        border-width: 2px;
+    }
+
+    .inline-image {
+        height: 25px;
+    }
+    .salesman {
+        height: 40px;
+    }
+
+    .buy-button {
+        width: 120px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .shake-price, .shake-phone {
+        animation-duration: 1s; /* Slightly slower shake on mobile maybe? */
+    }
+}
